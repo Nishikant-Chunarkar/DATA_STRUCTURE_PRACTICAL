@@ -1,0 +1,225 @@
+// INSERT AT THE BEGINNING
+# include <iostream>
+using namespace std;
+int main()
+{
+    int ar[100],n,i,num;
+    cout<<"enter the no. of element you want in array:";
+    cin>>n;
+    cout<<"entering element in array \n";
+
+    for(i=0;i<n;i++)
+    {
+       cout<<"enter element:";
+       cin>>ar[i];
+    }
+    cout<<"displaying the array\n";
+
+    for(i=0;i<n;i++)
+    {
+        cout<<ar[i]<<"\t";
+    }
+
+    // to insert element at the begining
+
+    int pos=0;
+    for(i=n;i>=0;i--)
+    {
+        ar[i+1]=ar[i];
+    }
+    n++;
+    cout<<"\nenter the element for 1st position:";
+    cin>>num;
+    ar[pos]=num;
+    cout<<"after inserting the element at 1st position :\n";
+    for(i=0;i<n;i++)
+    {
+        cout<<ar[i]<<"\t";
+    }
+}
+
+// INSERT AT THE END
+# include <iostream>
+using namespace std;
+int main()
+{
+    int ar[100],i,n,num;
+    cout<<"enter the size of array:";
+    cin>>n;
+    // entering element in the array
+    for(i=0;i<n;i++)
+    {
+        cout<<"enter "<<i+1<<" element:";
+        cin>>ar[i];
+    }
+    cout<<"your array is \n";
+    for(i=0;i<n;i++)
+    {
+        cout<<ar[i]<<" ";
+    }
+    cout<<"\nenter the element you want at the end:";
+    cin>>num;
+    ar[n]=num;
+    cout<<"after inserting the element at the end array becomes\n";
+    n++;
+    for(i=0;i<n;i++)
+    {
+        cout<<ar[i]<<" ";
+    }
+
+
+}
+// INSERT AT ANY POSITION
+# include <iostream>
+using namespace std;
+int main()
+{
+    int ar[100],n,i,num;
+    cout<<"enter the no. of element you want in array:";
+    cin>>n;
+    cout<<"entering element in array \n";
+
+    for(i=0;i<n;i++)
+    {
+       cout<<"enter element:";
+       cin>>ar[i];
+    }
+    cout<<"displaying the array\n";
+
+    for(i=0;i<n;i++)
+    {
+        cout<<ar[i]<<"\t";
+    }
+
+    // to insert element at specific location
+
+    int pos;
+    cout<<"\nenter the position of element you want to insert:";
+    cin>>pos;
+    for(i=n;i>=0;i--)
+    {
+        ar[i+1]=ar[i];
+    }
+    n++;
+    cout<<"\nenter the element  :";
+    cin>>num;
+    ar[pos-1 ]=num;
+    cout<<"after inserting the element at position :\n";
+    for(i=0;i<n;i++)
+    {
+        cout<<ar[i]<<"\t";
+    }
+}
+
+// DELETE 1ST ELEMENT
+
+# include <iostream>
+using namespace std;
+int main()
+ {
+    int ar[100],n,i;
+    cout<<"enter the no. of elements you want to insert:";
+    cin>>n;
+
+    for(i=0;i<n;i++)
+    {
+      cout<< "enter element:";
+      cin>>ar[i];
+    }
+
+cout<<"your array is:";
+    for(i=0;i<n;i++)
+    {
+      cout<<ar[i]<<" ";
+    }
+
+    int pos=0;
+
+    for(i=0;i<n-1;i++)
+     {
+        ar[i]=ar[i+1];
+     }
+     n--;
+     cout<<"\nafter deleting 1st element your array is\n";
+
+     for(i=0;i<n;i++)
+       {
+        cout<<ar[i]<<" ";
+       }
+    
+ }
+
+// DELETE LAST ELEMENT
+
+# include <iostream>
+using namespace std;
+int main()
+ {
+    int ar[100],n,i;
+    cout<<"enter the no. of elements you want to insert:";
+    cin>>n;
+
+    for(i=0;i<n;i++)
+    {
+      cout<< "enter element:";
+      cin>>ar[i];
+    }
+
+cout<<"your array is:";
+    for(i=0;i<n;i++)
+    {
+      cout<<ar[i]<<" ";
+    }
+
+    
+     n--;
+     cout<<"\nafter deleting elemnet your array is\n";
+
+     for(i=0;i<n;i++)
+       {
+        cout<<ar[i]<<" ";
+       }
+    
+ }
+
+// DELETE ANY ELEMENT
+
+# include <iostream>
+using namespace std;
+int main()
+ {
+    int ar[100],n,i;
+    cout<<"enter the no. of elements you want to insert:";
+    cin>>n;
+
+    for(i=0;i<n;i++)
+    {
+      cout<< "enter element:";
+      cin>>ar[i];
+    }
+
+cout<<"below is your array:";
+    for(i=0;i<n;i++)
+    {
+      cout<<ar[i]<<" ";
+    }
+
+    int pos;
+    cout<<"\nenter the position of the array you want to delete:";
+    cin>>pos;
+    int p;
+    p=pos+1;
+
+    for(i=pos-1;i<n-1;i++)
+     {
+        ar[i]=ar[i+1];
+     }
+     n--;
+     cout<<"after deleting elemnet your array is\n";
+
+     for(i=0;i<n;i++)
+       {
+        cout<<ar[i]<<" ";
+       }
+    
+ }
